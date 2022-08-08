@@ -11,7 +11,11 @@ export const BreadCrumb = ({ categories }: Props) => {
         <ul className={styles.categories}>
           {categories.map((category) => (
             <li key={category}>
-              <Link href={`/items?search=${category}`}>
+              <Link
+                href={`/items?search=${category
+                  .normalize("NFD")
+                  .replace(/[\u0300-\u036f]/g, "")}`}
+              >
                 <a>{category}</a>
               </Link>
               <i className="arrow right"></i>

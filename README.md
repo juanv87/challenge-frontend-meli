@@ -12,13 +12,13 @@ git clone git@github.com:juanv87/challenge-frontend-meli.git
 2. Instalar dependencias del backend:
 ```bash
 cd backend
-npm i
+npm i 
 ```
 
 3. Instalar dependencias del cliente:
 ```bash
 cd client
-npm i
+npm i // yarn
 ```
 
 Inicializar servidor:
@@ -30,7 +30,7 @@ npm run server
 Inicializar cliente:
 ```bash
 cd client
-npm run dev
+npm run dev // yarn dev
 ```
 
 
