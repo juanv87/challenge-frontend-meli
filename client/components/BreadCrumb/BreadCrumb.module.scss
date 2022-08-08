@@ -1,0 +1,21 @@
+@import "../../styles/Colors.scss";
+@import "../../styles/Spaces.scss";
+.categories {
+  display: flex;
+  margin: $space_small 0;
+  gap: 5px;
+  li {
+    a {
+      color: $grayMedium;
+    }
+    i {
+      margin: 0 9px;
+      border-color: $grayMedium;
+    }
+    &:last-child {
+      i {
+        display: none;
+      }
+    }
+  }
+}

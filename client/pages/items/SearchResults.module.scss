@@ -1,0 +1,21 @@
+@import "../../styles/Colors.scss";
+@import "../../styles/Spaces.scss";
+.section {
+  background-color: #fff;
+  border-radius: 3px;
+}
+.categories {
+  display: flex;
+  margin: $space_small 0;
+  gap: 5px;
+  li {
+    span {
+      color: $grayMedium;
+    }
+    &:after {
+      content: ">";
+      color: $grayMedium;
+      margin: 3px 5px;
+    }
+  }
+}

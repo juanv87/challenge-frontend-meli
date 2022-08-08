@@ -1,0 +1,48 @@
+@import "../../styles/Colors.scss";
+@import "../../styles/Spaces.scss";
+
+.item_result_container {
+  display: flex;
+  justify-content: space-between;
+  gap: $space_small;
+  border-bottom: thin solid #eee;
+  padding: $space_small;
+  .item_photo {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      object-fit: contain;
+    }
+  }
+  .item_info {
+    flex: 1;
+    .item_price {
+      gap: 10px;
+      display: flex;
+      align-items: center;
+      margin-top: 18px;
+      span {
+        color: $grayDark;
+        font-size: 24px;
+      }
+    }
+    .item_title {
+      margin-top: $space_large;
+      max-width: 400px;
+      span {
+        color: $grayDark;
+        font-size: 18px;
+      }
+    }
+  }
+  .item_locale {
+    font-size: 12px;
+    color: $grayMedium;
+    padding-top: 30px;
+    width: 160px;
+  }
+}

@@ -1,0 +1,64 @@
+@import "../../../styles/Colors.scss";
+@import "../../../styles/Spaces.scss";
+.product_page {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: $space_large;
+  margin-bottom: 62px;
+  .product_container {
+    display: flex;
+    .product_col_left {
+      width: 680px;
+      max-width: 100%;
+      .product_image {
+        margin-bottom: 175px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-height: 600px;
+          object-fit: contain;
+        }
+        @media (max-width: 768px) {
+          margin-bottom: $space_large;
+        }
+      }
+    }
+    .product_col_right {
+      flex: 1;
+      .subtitle {
+        font-size: 14px;
+        margin: $space_large 0 $space_small 0;
+      }
+      h1 {
+        color: $grayDark;
+        font-weight: 500;
+        font-size: 24px;
+        margin: 0;
+      }
+      .price {
+        color: $grayDark;
+        font-size: 46px;
+        line-height: 46px;
+        margin: $space_large 0;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  .product_description {
+    h3 {
+      font-size: 28px;
+      color: $grayDark;
+      font-weight: normal;
+      margin: 0 0 $space_large 0;
+    }
+    p {
+      font-size: 16px;
+      color: $grayMedium;
+      font-weight: normal;
+      margin: 0 0 $space_large 0;
+    }
+  }
+}
