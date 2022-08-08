@@ -7,7 +7,7 @@ import { BtnContainer } from "../../../components/ui/BtnContainer";
 import { Container } from "../../../components/ui/LayoutContainer";
 import { ProductDetail } from "../../../interfaces/ProductDetail";
 import { CategoriesContext } from "../../../services/context";
-import { getItemDetail } from "../../../services/itemsRepository";
+import { getItemById } from "../../../services/getItemById";
 import styles from "./ProductItem.module.scss";
 
 interface Props {
@@ -15,7 +15,7 @@ interface Props {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const product = await getItemDetail(query.id as string);
+  const product = await getItemById(query.id as string);
   return {
     props: { product },
   };

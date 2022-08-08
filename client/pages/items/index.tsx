@@ -2,19 +2,19 @@ import { GetServerSideProps } from "next";
 import { ItemResult } from "../../components/ItemResult";
 import { Container } from "../../components/ui/LayoutContainer";
 import { ItemsSearchResults } from "../../interfaces/ItemsData";
-import { getItemsByQuery } from "../../services/itemsRepository";
 import styles from "./SearchResults.module.scss";
 import { useEffect } from "react";
 import useAppContext from "../../services/context";
 import { BreadCrumb } from "../../components/BreadCrumb";
 import Head from "next/head";
+import { getItemsBySearch } from "../../services/getItemsBySearch";
 
 interface Props {
   itemsSearchResults: ItemsSearchResults;
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const itemsSearchResults = await getItemsByQuery(query.search as string);
+  const itemsSearchResults = await getItemsBySearch(query.search as string);
   return {
     props: { itemsSearchResults },
   };

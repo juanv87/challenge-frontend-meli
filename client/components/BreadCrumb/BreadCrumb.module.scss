@@ -4,9 +4,13 @@
   display: flex;
   margin: $space_small 0;
   gap: 5px;
+  @media (max-width: 600px) {
+    padding: 0 $space_small;
+  }
   li {
     a {
       color: $grayMedium;
+      font-size: 14px;
     }
     i {
       margin: 0 9px;
