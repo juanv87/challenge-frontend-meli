@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <title>Vista 1 / Caja de búsqueda</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
         <meta
           name="description"
